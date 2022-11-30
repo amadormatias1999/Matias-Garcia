@@ -1,0 +1,380 @@
+:root
+{
+    --blanco: #ffffff;
+    --grisclaro: hwb(210 90% 5%);
+    --oscuro: #212121;
+    --primario: hsl(45, 99%, 51%);
+    --secundario:#00abfb;
+    --tercero: black;
+    --fuenteprincipal: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/** Globales **/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  *, *::before, *:after {
+    box-sizing: inherit;
+    margin: .8rem 0;
+  }
+
+  body
+  {
+    margin: 0;
+    font-size: 16px;
+    font-family: var(--fuenteprincipal);
+    background-color: black
+     /** background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100% ); /*PERMITE HACER USO DEL DEGRADADO */;
+
+  }
+
+  img
+  {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: .5rem;
+  }
+  p
+  {
+    margin-top: 4rem;
+    text-align: justify;
+  }
+  .p-ubicacion{
+    margin-top: 0;
+  }
+
+
+.contenedor 
+{
+    max-width: 100rem;
+    margin: 0 auto;    
+}
+
+.contenedorg
+{
+    max-width: 150rem;
+    margin: 0 auto;
+}
+
+.sombra
+{
+    -webkit-box-shadow: 6px 2px 30px -12px rgba(0,0,0,0.72); /* AGREGA SOMBRA A LOS ELEMENTOS, SE EXTRAE DE PAGINA CSSMATIC */
+    -moz-box-shadow: 6px 2px 30px -12px rgba(0,0,0,0.72);
+    box-shadow: 6px 2px 30px -12px rgba(0,0,0,0.72);
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--blanco);
+}
+
+.boton
+    {
+        background-color: var(--secundario);
+        color: var(--blanco);
+        padding: 1rem 3rem;
+        margin-top: 3rem;
+        font-size: 2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: .5rem;
+        width: 90%;
+        text-align: center;
+        border: none;
+    }
+    
+    @media (min-width: 768px) { 
+        .boton{
+            width:auto;
+        }
+    }
+
+    .boton:hover
+    {
+        cursor: pointer;
+        background-color:var(--oscuro);
+    }
+
+
+/** titulos**/
+
+h1
+    {
+        font-size: 5.1rem;
+        color: var(--blanco);
+    }
+
+h2
+    {
+        font-size: 2.8rem;
+    }
+
+h3
+    {
+        font-size: 1.8rem;
+    }
+
+h1, h2, h3
+{
+    text-align: center;
+}
+
+header
+{
+    margin: 0;
+}
+
+/* Titulo imagen de matias */
+
+.contenedor-img
+{
+    max-width: 100rem;
+    width: 30rem;
+    margin: 0 auto;
+}
+
+
+
+/** Barra de navegacion ***/
+.navegacion 
+{
+    background-color: var(--tercero);
+}
+
+.navegacion-principal
+{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+
+   @media (min-width: 768px) { 
+       .navegacion-principal
+       {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+   }
+
+   .navegacion-principal a
+   {
+    color: var(--blanco);
+    text-decoration-line: none;
+    font-size: 2rem;
+    padding: 1rem;
+   }
+
+   .enlaces-inicio:hover
+   {
+    color: var(--secundario);
+   }
+
+
+
+/** Barra imagen **/
+
+   .barra
+   {
+    background-image: url(../img/barra.jpeg);
+
+        background-size: cover;
+        height: 450px;
+        position: relative;
+        margin-bottom: 2rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+   }
+
+
+.barra-contenido
+    {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    }
+
+.servicios
+{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  
+
+}
+
+.servicio 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icono
+{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--oscuro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.servicio h3
+{
+color: var(--secundario);
+font-weight: 700;
+font-size: 2rem;
+}
+
+/** contactos**/
+.contactanos
+{
+    padding-top: 5rem;
+}
+
+.contactos
+{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    padding-top: 2em;
+}
+
+.contacto3
+{
+    grid-column: 1/3;
+}
+
+
+@media (min-width: 768px) { 
+    .contactos
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.servicio p
+{
+    margin: 4rem 10rem auto ;
+    text-align: justify;
+}
+
+.contacto3
+{
+    grid-column: 3/4;
+}
+}
+
+.contacto-icono
+{
+   text-align: center;
+    
+}
+
+footer
+{
+    color: var(--grisclaro);
+    text-align: center;
+}
+
+
+/** SOBREMI**/
+
+@media (min-width: 768px) { 
+    .cliente
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem   ;
+    align-items: center; 
+}
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+
+
+
+
+
+
+
+/* //Galeria  */
+
+.header-galeria h3
+{
+    text-transform:capitalize;
+    font-weight:500;
+    font-size: 30px;
+}
+
+.galeria1
+{
+    margin-top: 2rem ;
+}
+
+.galeria2 {
+    margin-top: 10rem;
+}
+
+.imagenes {
+    display: grid;
+    gap: 3rem;}
+
+
+@media (min-width: 480px) { 
+    .imagenes
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+}
+
+
+
+@media (min-width: 768px) { 
+    .imagenes{
+        grid-template-columns: repeat(3, 1fr) ;
+    
+     }
+
+            .foto-boda
+            {
+             
+                grid-column: 2/4;
+                grid-row: 1/3;                 
+            }
+            .foto-dia
+            {
+                grid-column: 1/3;
+                grid-row: 2/ 4 ;
+            }
+            
+            .foto-momentos  
+            {
+                grid-column: 2/4;
+                grid-row: 3/5;
+            }
+
+}
+
+svg:hover{
+    transform: scale(1.1);
+    transition: .2s;
+}
+}
+
+.imagenes img {
+    border-radius: .4rem;
+}
+
+
+
